@@ -104,3 +104,71 @@
     background-color: transparent;
     left: 290px;
 }
+
+/* Añade estos estilos al final de tu archivo auth.css */
+
+/* Estilos para el password container */
+.password-container {
+    position: relative;
+}
+
+/* Estilos para el toggle de contraseña */
+.container {
+    --color: #a5a5b0;
+    --size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container .eye {
+    position: absolute;
+    animation: keyframes-fill .5s;
+    width: var(--size);
+    height: var(--size);
+}
+
+.container .eye-slash {
+    position: absolute;
+    animation: keyframes-fill .5s;
+    display: none;
+    width: var(--size);
+    height: var(--size);
+}
+
+/* Estilos cuando el checkbox está marcado */
+.container input:checked ~ .eye {
+    display: none;
+}
+
+.container input:checked ~ .eye-slash {
+    display: block;
+}
+
+/* Ocultar el checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Animación para los iconos */
+@keyframes keyframes-fill {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
