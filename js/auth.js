@@ -35,7 +35,6 @@ document.getElementById('togglePassword').addEventListener('click', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Código existente de tu auth.js...
 
     // Funcionalidad para mostrar/ocultar contraseña
     const togglePassword = document.getElementById('togglePassword');
@@ -47,20 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
             passwordInput.type = this.checked ? 'text' : 'password';
         });
     }
-
-    // Si ya tienes un evento de envío de formulario, asegúrate de no duplicarlo
-    // Este ejemplo asume que posiblemente ya tengas este código:
     
     const loginForm = document.getElementById('loginForm');
     if (loginForm && !loginForm.hasSubmitListener) {
         loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Aquí iría tu código de autenticación
-            // Por ejemplo:
-            // const username = document.getElementById('username').value;
-            // const password = passwordInput.value;
-            // realizarLogin(username, password);
+  
         });
         loginForm.hasSubmitListener = true;
     }

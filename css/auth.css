@@ -115,7 +115,7 @@
 /* Estilos para el toggle de contraseña */
 .container {
     --color: #a5a5b0;
-    --size: 20px;
+    --size: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,9 +124,9 @@
     font-size: var(--size);
     user-select: none;
     fill: var(--color);
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 12px;
+    top: -9%;
+    transform: translateY(-40%);
 }
 
 .container .eye {
@@ -134,23 +134,23 @@
     animation: keyframes-fill .5s;
     width: var(--size);
     height: var(--size);
+    display: none;
 }
 
 .container .eye-slash {
     position: absolute;
     animation: keyframes-fill .5s;
-    display: none;
     width: var(--size);
     height: var(--size);
 }
 
 /* Estilos cuando el checkbox está marcado */
 .container input:checked ~ .eye {
-    display: none;
+    display: block;
 }
 
 .container input:checked ~ .eye-slash {
-    display: block;
+    display: none;
 }
 
 /* Ocultar el checkbox */
